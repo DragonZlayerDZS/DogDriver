@@ -1,0 +1,45 @@
+public class DogDriver
+{
+    public static void main(String[] args)
+    {
+        Dog dog1 = new Dog("Fang", 5, "Husky", 80);
+        Dog dog2 = new Dog("Nutmeg", 12, "Australian Sheepdog", 45);
+        Dog dog3 = new Dog("Pup", 14, "Husky", 50);
+
+        System.out.println(dog1.GetName() + " is " + dog1.GetAge() + " old");
+        System.out.println(dog1.GetName() + " is a " + dog1.GetTypeOfDog());
+        System.out.println();
+        System.out.println(dog2.GetName() + " weighs " + dog2.GetWeight());
+        System.out.println();
+        System.out.println(dog3);
+        System.out.println();
+        System.out.println("You have " + dog1.HowManyDogs() + " dogs");
+        System.out.println();
+
+        if(dog2.compareTo(dog1) == 1)
+        {
+            System.out.println(dog2.GetName() + " is as old as " + dog1.GetName());
+        }
+        else if(dog2.compareTo(dog1) == 0)
+        {
+            System.out.println(dog2.GetName() + " is older than " + dog1.GetName());
+        }
+        else if(dog2.compareTo(dog1) == -1)
+        {
+            System.out.println(dog2.GetName() + " is young than " + dog1.GetName());
+        }
+
+        if(dog1.compareTo(dog3) == 1)
+        {
+            System.out.println(dog1.GetName() + " is as old as " + dog3.GetName());
+        }
+        else if(dog1.compareTo(dog3) == 0)
+        {
+            System.out.println(dog1.GetName() + " is older than " + dog3.GetName());
+        }
+        else if(dog1.compareTo(dog3) == -1)
+        {
+            System.out.println(dog1.GetName() + " is younger than " + dog3.GetName());
+        }
+    }
+}
